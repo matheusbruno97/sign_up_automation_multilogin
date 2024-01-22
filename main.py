@@ -7,7 +7,7 @@ from env import *
 
 driver, profile_id = mlx.instantiate_driver()
 
-def automation():
+def main():
     try:
         driver.get("https://temp-mail.org/en/")
         for _ in range(5): # check if the email address is still loading or not
@@ -64,5 +64,6 @@ def automation():
     finally:
         driver.quit()
         mlx.stop_profile(profile_id)
-    
-automation()
+
+if __name__ == "__main__":
+    main()
